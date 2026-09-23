@@ -1,4 +1,4 @@
-# Sistem Manajemen Robot Taman Dinosaurus (Versi UTS)
+# Sistem Manajemen Robot Taman Dinosaurus 
 
 Aplikasi Java berbasis console yang mensimulasikan sistem manajemen robot dinosaurus di sebuah taman hiburan. Proyek ini merupakan **pengembangan dari tugas individu sebelumnya** (Tugas Individu PBO - Robot Dinosaurus) yang dikembangkan lebih lanjut untuk memenuhi **Ujian Tengah Semester (UTS) mata kuliah Pemrograman Berorientasi Objek (PBO)**.
 
@@ -9,9 +9,13 @@ Aplikasi Java berbasis console yang mensimulasikan sistem manajemen robot dinosa
 
 **Mata Kuliah** : Pemrograman Berorientasi Objek (PBO)
 
-**Keterangan**  : Program dikembangkan dari tugas individu sebelumnya sesuai izin dosen pengampu.
-
 ---
+
+## Struktur Project
+
+
+<img width="281" height="222" alt="image" src="https://github.com/user-attachments/assets/9e515def-a394-47c2-afc6-64ebb2d51f67" />
+
 
 ## 1. Deskripsi Proyek
 
@@ -51,30 +55,12 @@ Dibanding versi tugas sebelumnya, ditambahkan:
 
 ### Hierarki Class
 
-```
-                Dinosaurus (superclass)
-                /       |        \
-        Karnivora   Herbivora   Omnivora
-```
+
+<img width="1127" height="1536" alt="image" src="https://github.com/user-attachments/assets/a91c236a-484f-4c92-b463-eebb9184638f" />
+
 
 `Karnivora`, `Herbivora`, dan `Omnivora` merupakan subclass dari `Dinosaurus`. Ketiganya mewarisi atribut `id`, `nama`, `spesies`, dan `eraHidup`, lalu menambahkan atribut khusus masing-masing serta meng-override method `makan()`, `bersuara()`, dan `tampilkanInfo()`.
 
-### Cara Menjalankan
-
-1. Clone repository ini
-   ```bash
-   git clone <url-repo-kamu>
-   ```
-2. Buka project menggunakan Apache NetBeans / IntelliJ / VS Code (atau IDE Java lain yang mendukung Maven)
-3. Pastikan **Main Class** project mengarah ke `com.mycompany.tugasindividu_pbo.Main`
-4. Jalankan project (Run)
-5. Ikuti menu interaktif yang muncul di console
-
-Atau lewat terminal (tanpa IDE), dari folder project:
-```bash
-javac -d out $(find src -name "*.java")
-java -cp out com.mycompany.tugasindividu_pbo.Main
-```
 
 ### Cara Kerja Sistem
 
@@ -96,55 +82,58 @@ Objek-objek `Karnivora`, `Herbivora`, dan `Omnivora` disimpan bersama dalam satu
 
 ## 3. Penjelasan Gambar (Screenshot Output Program)
 
-> Ganti tautan gambar di bawah ini dengan screenshot hasil run program kamu sendiri (drag & drop gambar ke kolom komentar Issue/PR di GitHub untuk mendapatkan link, seperti pada README tugas sebelumnya, lalu tempel di sini).
 
 ### Menu Utama
 
-*(tempel screenshot menu utama di sini)*
+
+<img width="313" height="213" alt="image" src="https://github.com/user-attachments/assets/0bafa011-64dc-4dcb-98a1-bb58f0582671" />
+
 
 Menampilkan seluruh pilihan menu 0-6.
 
 ### Tambah Robot Dinosaurus Baru
 
-*(tempel screenshot menu 1 di sini)*
+
+<img width="464" height="214" alt="image" src="https://github.com/user-attachments/assets/af3083c5-97cb-4a2f-8c32-b06d8d4a82ec" />
+
 
 Menunjukkan proses input kategori dan data robot baru, lalu robot berhasil ditambahkan ke `ArrayList`.
 
 ### Tampilkan Daftar Robot (Mode Ringkas & Lengkap)
 
-*(tempel screenshot menu 2 - mode ringkas di sini)*
 
-*(tempel screenshot menu 2 - mode lengkap di sini)*
+<img width="454" height="137" alt="image" src="https://github.com/user-attachments/assets/3baba33a-776c-43cd-a417-e2253b72a982" />
+
+
+<img width="319" height="419" alt="image" src="https://github.com/user-attachments/assets/7b6906bb-5552-43f8-b746-291fa71837cb" />
+
 
 Membuktikan **method overloading** `tampilkanInfo()` (lengkap) dan `tampilkanInfo(boolean)` (ringkas) menghasilkan output berbeda sesuai parameter yang dikirim.
 
 ### Simulasi Beri Makan (dengan Menu Ekstra)
 
-*(tempel screenshot menu 3 di sini)*
+
+<img width="519" height="255" alt="image" src="https://github.com/user-attachments/assets/27286774-f089-4b6a-83aa-4b66a106e1a1" />
+
 
 Membuktikan **method overriding** (`makan()` berbeda tiap kategori dinosaurus) sekaligus **method overloading** (`makan(String menuTambahan)` saat memilih menambah menu ekstra).
 
 ### Uji Suara Robot
 
-*(tempel screenshot menu 4 di sini)*
+
+<img width="684" height="59" alt="image" src="https://github.com/user-attachments/assets/47d11af6-0d5d-4880-9458-0abaf808a246" />
+
 
 ### Aksi Khusus per Jenis Dinosaurus
 
-*(tempel screenshot menu 5 - Karnivora/Herbivora/Omnivora di sini)*
+
+<img width="707" height="61" alt="image" src="https://github.com/user-attachments/assets/8d14af0f-5584-4b5d-9c54-307a5fa94762" />
+
 
 ### Hapus Robot Dinosaurus
 
-*(tempel screenshot menu 6 di sini)*
 
----
+<img width="429" height="199" alt="image" src="https://github.com/user-attachments/assets/a938fca9-117f-4a4b-be0e-36c7e6ed5c3d" />
 
-## Struktur Project
 
-```
-src/main/java/com/mycompany/tugasindividu_pbo/
-├── Dinosaurus.java   (superclass, termasuk method overloading)
-├── Karnivora.java    (subclass)
-├── Herbivora.java    (subclass)
-├── Omnivora.java     (subclass)
-└── Main.java         (menu interaktif & logika program)
-```
+
